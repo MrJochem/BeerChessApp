@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BeerChess</title>
+	<link rel="stylesheet" href="stylesheets/style.css">
+	<link rel="stylesheet" href="stylesheets/game.css">
+</head>
+<body>
+	<div id="error-message">Please enlarge your window for the site to work</div>
+	<div id="game">
+		<table id="gameBoard">
+			<tbody>
+				<tr>
+					<td class="light" id="a8"><img src="images/RookBlack.png" class="piece"/><span class="boardNumbers">8</span></td>
+					<td class="dark" id="b8"><img src="images/knightBlack.png" class="piece"/></td>
+					<td class="light" id="c8"><img src="images/BishopBlack.png" class="piece"/></td>
+					<td class="dark" id="d8"><img src="images/QueenBlack.png" class="piece"/></td>
+					<td class="light" id="e8"><img src="images/KingBlack.png" class="piece"/></td>
+					<td class="dark" id="f8"><img src="images/BishopBlack.png" class="piece"/></td>
+					<td class="light" id="g8"><img src="images/KnightBlack.png" class="piece"/></td>
+					<td class="dark" id="h8"><img src="images/RookBlack.png" class="piece"/></td>
+				</tr>
+				<tr>
+					<td class="dark" id="a7"><img src="images/PawnBlack.png" class="piece"/><span class="boardNumbers">7</span></td>
+					<td class="light" id="b7"><img src="images/PawnBlack.png" class="piece"/></td>
+					<td class="dark" id="c7"><img src="images/PawnBlack.png" class="piece"/></td>
+					<td class="light" id="d7"><img src="images/PawnBlack.png" class="piece"/></td>
+					<td class="dark" id="e7"><img src="images/PawnBlack.png" class="piece"/></td>
+					<td class="light" id="f7"><img src="images/PawnBlack.png" class="piece"/></td>
+					<td class="dark" id="g7"><img src="images/PawnBlack.png" class="piece"/></td>
+					<td class="light "id="h7"><img src="images/PawnBlack.png" class="piece"/></td>
+				</tr>
+				<tr>
+					<td class="light" id="a6"><span class="boardNumbers">6</span></td>
+					<td class="dark" id="b6"></td>
+					<td class="light" id="c6"></td>
+					<td class="dark" id="d6"></td>
+					<td class="light" id="e6"></td>
+					<td class="dark" id="f6"></td>
+					<td class="light" id="g6"></td>
+					<td class="dark" id="h6"></td>
+				</tr>
+				<tr>
+					<td class="dark" id="a5"><span class="boardNumbers">5</span></td>
+					<td class="light" id="b5"></td>
+					<td class="dark" id="c5"></td>
+					<td class="light" id="d5"></td>
+					<td class="dark" id="e5"></td>
+					<td class="light" id="f5"></td>
+					<td class="dark" id="g5"></td>
+					<td class="light"id="h5"></td>
+				</tr> 
+				<tr>
+					<td class="light" id="a4"><span class="boardNumbers">4</span></td>
+					<td class="dark" id="b4"></td>
+					<td class="light" id="c4"></td>
+					<td class="dark" id="d4"></td>
+					<td class="light" id="e4"></td>
+					<td class="dark" id="f4"></td>
+					<td class="light" id="g4"></td>
+					<td class="dark" id="h4"></td>
+				</tr>
+				<tr>
+					<td class="dark" id="a3"><span class="boardNumbers">3</span></td>
+					<td class="light" id="b3"></td>
+					<td class="dark" id="c3"></td>
+					<td class="light" id="d3"></td>
+					<td class="dark" id="e3"></td>
+					<td class="light" id="f3"></td>
+					<td class="dark" id="g3"></td>
+					<td class="light"id="h3"></td>
+				</tr>
+				<tr>
+					<td class="light" id="a2"><img src="images/PawnWhite.png" class="piece"/><span class="boardNumbers">2</span></td>
+					<td class="dark" id="b2"><img src="images/PawnWhite.png" class="piece"/></td>
+					<td class="light" id="c2"><img src="images/PawnWhite.png" class="piece"/></td>
+					<td class="dark" id="d2"><img src="images/PawnWhite.png" class="piece"/></td>
+					<td class="light" id="e2"><img src="images/PawnWhite.png" class="piece"/></td>
+					<td class="dark" id="f2"><img src="images/PawnWhite.png" class="piece"/></td>
+					<td class="light" id="g2"><img src="images/PawnWhite.png" class="piece"/></td>
+					<td class="dark" id="h2"><img src="images/PawnWhite.png" class="piece"/></td>
+				</tr>
+				<tr>
+					<td class="dark" id="a1"><img src="images/RookWhite.png" class="piece"/><span class="boardNumbers">1</span><span class="boardLetters">a</span></td>
+					<td class="light" id="b1"><img src="images/KnightWhite.png" class="piece"/><span class="boardLetters">b</span></td>
+					<td class="dark" id="c1"><img src="images/BishopWhite.png" class="piece"/><span class="boardLetters">c</span></td>
+					<td class="light" id="d1"><img src="images/QueenWhite.png" class="piece"/><span class="boardLetters">d</span></td>
+					<td class="dark" id="e1"><img src="images/KingWhite.png" class="piece"/><span class="boardLetters">e</span></td>
+					<td class="light" id="f1"><img src="images/BishopWhite.png" class="piece"/><span class="boardLetters">f</span></td>
+					<td class="dark" id="g1"><img src="images/KnightWhite.png" class="piece"/><span class="boardLetters">g</span></td>
+					<td class="light" id="h1"><img src="images/RookWhite.png" class="piece"/><span class="boardLetters">h</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="center">
+		<img src="images/BeerChessLogo.png" alt="Beer chess logo width" id="logo"/>
+	</div>
+
+	<div id="right">
+		<h2>Moves: </h2>
+		<span id="moves">
+		</span>
+		<button id="resign">Resign</button>
+		<button id="draw">Offer draw</button>
+	</div>
+	<script src="javascripts/chess.js"></script>
+	<script src="javascripts/messages.js"></script>
+	<script src="javascripts/squares.js"></script>
+	<script src="javascripts/config.js"></script>
+	<script src="javascripts/ChessGame.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+#center {
+  width: 15px;
+  height: 15px;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+}
+
+#center::before {
+  position:relative;
+  content: "©";
+  font-size: 14px;
+  width: 20px;
+  height: 20px;
+}
+
+#logo {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  padding: 0;
+  animation: spin 5s infinite linear;
+}
+
+#game {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 75vw;
+  height: 75vw;
+  max-width: 75vh;
+  min-width: 500px;
+  min-height: 500px;
+  max-height: 75vh;
+}
+
+#gameBoard {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 50%;
+  top: 50%;
+  margin: -45% 0 0 -45%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  z-index: 0;
+}
+
+#gameBoard td {
+  width: 12.5%;
+  height: 12.5%;
+  text-align: center; /* for some reason also affects the images */
+  position: relative;
+}
+
+#gameBoard .light { background: #fff5c4; }
+#gameBoard .dark { background: rgb(119, 61, 38); }
+#gameBoard .boardNumbers {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 18px;
+}
+#gameBoard .light .boardNumbers {
+  color:rgb(119, 61, 38);
+}
+#gameBoard .dark .boardNumbers {
+  color: #fff5c4;
+}
+
+#gameBoard .boardLetters {
+  position: absolute;
+  bottom: 0px;
+  right: 5px;
+  font-size: 18px;
+  padding: 0;
+}
+#gameBoard .light .boardLetters {
+  color:rgb(119, 61, 38);
+}
+#gameBoard .dark .boardLetters {
+  color: #fff5c4;
+}
+
+.piece {
+  width: 60%;
+}
+
+
+.highlighted {
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  margin: -25% 0 0 -25%;
+}
+
+.popup {
+  position: absolute;
+  width: 50%;
+  height: 62.5%;
+  left: 50%;
+  top: 50%;
+  border: 4mm outset rgba(49, 49, 49, 0.6);
+  margin: -35% 0 0 -25%;
+  text-align: center;
+  background-color:rgb(120, 120, 120);
+}
+
+.playAgain {
+  text-align: center;
+  padding: 1em;
+  background-color:rgb(14, 156, 1);
+  border-width: 0px;
+  width: 40%;
+  height: 32%;
+  border-radius: 100%;
+  position: absolute;
+  left: 25%;
+  top: 75%;
+  margin: -16% 0 0 -20%;
+  font-size: large;
+  font-family: cursive, serif, sans-serif;
+  color: rgb(200, 200, 200);
+}
+
+.playAgain:hover {
+  background-color: rgb(11, 134, 0);
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+.leave {
+  text-align: center;
+  padding: 1em;
+  background-color:rgb(221, 52, 52);
+  border-width: 0px;
+  width: 40%;
+  height: 32%;
+  border-radius: 100%;
+  position: absolute;
+  left: 75%;
+  top: 75%;
+  margin: -16% 0 0 -20%;
+  font-size: large;
+  font-family: cursive, serif, sans-serif;
+  color: rgb(200, 200, 200);
+}
+
+.leave:hover {
+  background-color: rgb(180, 43, 43);
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+.popupText {
+  position: absolute;
+  width: 100%;
+  top: 12.5%;
+  left: 50%;
+  margin: -10% 0 0 -50%;
+  font-size: xx-large;
+  font-family: cursive, serif, sans-serif;
+  color: rgb(200, 200, 200);
+}
+
+.score {
+  position: absolute;
+  width: 100%;
+  top: 37.5%;
+  left: 50%;
+  margin: -10% 0 0 -50%;
+  font-size: x-large;
+  font-family: cursive, serif, sans-serif;
+  color: rgb(200, 200, 200);
+}
+
+.name1 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  right: 5%;
+  font-size: x-large;
+  font-family: cursive, serif, sans-serif;
+  color: rgb(200, 200, 200);
+  text-align: right;
+}
+
+.name2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 5%;
+  font-size: x-large;
+  font-family: cursive, serif, sans-serif;
+  color: rgb(200, 200, 200);
+  text-align: left;
+}
+
+#resign {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+}
+
+#draw {
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+}
+#right button {
+  position: absolute;
+  /* display: none; */
+  background-color: rgb(150, 150, 150);
+  width: 100px;
+  height: 50px;
+  border: none;
+  color: rgb(200, 200, 200);
+  background-clip: content-box;
+  text-align: center;
+  font-size: 15px;
+  float:left;
+}
+#right button:hover {
+  background-color: rgb(100,100,100);
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+#right button:active {
+  background-color: rgb(200, 200, 200);
+  transition-duration: 0ms;
+}
+
+#right {
+  background-color: rgb(120, 120, 120);
+  color: rgb(200, 200, 200);
+  position: absolute;
+  width: 15%;
+  height: 80%;
+  max-width: 25%;
+  min-width: 250px;
+  min-height: fit-content;
+  font-size: 12px;
+  top: 10%;
+  right: 10%;
+  border: 4mm outset rgba(25, 25, 25, 0.6);
+}
+#right h2 {
+  text-align: center;
+}
+
+#right::after {
+  position: absolute;
+  content: "app created by Lesley and Jochem";
+  bottom: -30px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+@keyframes spin {
+  from{
+  transform: rotateY(0deg);
+  }
+  to{
+  transform: rotateY(360deg);
+  }
+ }

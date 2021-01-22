@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeerChess</title>
+  <link rel="stylesheet" href="stylesheets/splash.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <div id="error-message">Please enlarge your window for the site to work</div>
+  <div id="left">
+    <h2 id="rules">Rules:</h2>
+    <div id="rulesRec"><p>
+      As the game is called beerches there are obviously some beer-rules atached.<br />
+      Ofcourse playing with these is optional.<br />
+      <br />Whenever one of your pieces is taken you drink X times, where X is the amount of points the piece has in value in standard chess.<br />
+      pawns: 1 point<br />bishop/knight: 3 points<br />rook: 5 points<br />queen: 8 points<br />
+      <br /> The loser finishes their drink. (drink has to be adleast half full)
+    </p></div>
+  </div>
+  <div id="center">
+    <img src="images/BeerChessLogo.png" alt="BeerChess logo" id="logo">
+    <form action="./game.html">
+      <button id="Play">Play a game</button>
+    </form>
+  </div>
+  <div id="right">
+    <h1>Game statistics:</h1>
+    <h2>Total games Initialized: <%= gamesInitialized %> </h2> 
+    <h2>games completed: <%= gamesCompleted %></h2>
+    <h2>Pieces taken: <%= piecesTaken %></h2>
+  </div>
+</body>
+</html>
